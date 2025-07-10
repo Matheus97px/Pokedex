@@ -11,13 +11,22 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.type = type
     pokemon.photo = pokeDetail.sprites.other['official-artwork'].front_default
 
+    pokemon.height = pokeDetail.height / 10 // em metros
+    pokemon.weight = pokeDetail.weight / 10 // em kg
+    pokemon.abilities = pokeDetail.abilities.map((slot) => slot.ability.name)
+
+    pokemon.stats = pokeDetail.stats.map((stat) => ({
+        name: stat.stat.name,
+        base: stat.base_stat
+    }));
+
     return pokemon
 }
 
 pokeApi.getPokemonDetail = (pokemon) => {
     return fetch(pokemon.url)
-    .then((response) => response.json())
-    .then(convertPokeApiDetailToPokemon)
+        .then((response) => response.json())
+        .then(convertPokeApiDetailToPokemon)
 }
 
 pokeApi.getPokemon = (offset = 0, limit = 5) => {

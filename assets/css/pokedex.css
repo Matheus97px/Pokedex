@@ -3,47 +3,171 @@
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr ;
-    
+    grid-template-columns: 1fr;
+
 }
 
-.normal{background-color:#a6a877 ;}
-.grass{background-color:#77c850 ;}
-.fire{background-color:#ee7f30 ;}
-.water{background-color:#678fee ;}
-.electric{background-color:#f7cf2e ;}
-.ice{background-color:#98d5d7 ;}
-.ground{background-color:#dfbf69 ;}
-.flying{background-color:#a98ff0 ;}
-.poison{background-color:#a040a0 ;}
-.fighting{background-color:#bf3029 ;}
-.psychic{background-color:#f65687 ;}
-.dark{background-color:#725847 ;}
-.rock{background-color:#b8a137 ;}
-.bug{background-color:#a8b720 ;}
-.ghost{background-color:#6e5896 ;}
-.steel{background-color:#b9b7cf ;}
-.dragon{background-color:#6f38f6 ;}
-.fairy{background-color:#f9aec7 ;}
+.normal {
+    background-color: #a6a877;
+}
 
-.modal-content.fire { background-color: #ee7f30; color: white; }
-.modal-content.grass { background-color: #77c850; color: white; }
-.modal-content.water { background-color: #678fee; color: white; }
-.modal-content.electric { background-color: #f7cf2e; color: black; }
-.modal-content.ice { background-color: #98d5d7; color: black; }
-.modal-content.ground { background-color: #dfbf69; color: black; }
-.modal-content.flying { background-color: #a98ff0; color: white; }
-.modal-content.poison { background-color: #a040a0; color: white; }
-.modal-content.fighting { background-color: #bf3029; color: white; }
-.modal-content.psychic { background-color: #f65687; color: white; }
-.modal-content.dark { background-color: #725847; color: white; }
-.modal-content.rock { background-color: #b8a137; color: black; }
-.modal-content.bug { background-color: #a8b720; color: black; }
-.modal-content.ghost { background-color: #6e5896; color: white; }
-.modal-content.steel { background-color: #b9b7cf; color: black; }
-.modal-content.dragon { background-color: #6f38f6; color: white; }
-.modal-content.fairy { background-color: #f9aec7; color: black; }
-.modal-content.normal { background-color: #a6a877; color: black; }
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+.modal-content.fire {
+    background-color: #ee7f30;
+    color: white;
+}
+
+.modal-content.grass {
+    background-color: #77c850;
+    color: white;
+}
+
+.modal-content.water {
+    background-color: #678fee;
+    color: white;
+}
+
+.modal-content.electric {
+    background-color: #f7cf2e;
+    color: black;
+}
+
+.modal-content.ice {
+    background-color: #98d5d7;
+    color: black;
+}
+
+.modal-content.ground {
+    background-color: #dfbf69;
+    color: black;
+}
+
+.modal-content.flying {
+    background-color: #a98ff0;
+    color: white;
+}
+
+.modal-content.poison {
+    background-color: #a040a0;
+    color: white;
+}
+
+.modal-content.fighting {
+    background-color: #bf3029;
+    color: white;
+}
+
+.modal-content.psychic {
+    background-color: #f65687;
+    color: white;
+}
+
+.modal-content.dark {
+    background-color: #725847;
+    color: white;
+}
+
+.modal-content.rock {
+    background-color: #b8a137;
+    color: black;
+}
+
+.modal-content.bug {
+    background-color: #a8b720;
+    color: black;
+}
+
+.modal-content.ghost {
+    background-color: #6e5896;
+    color: white;
+}
+
+.modal-content.steel {
+    background-color: #b9b7cf;
+    color: black;
+}
+
+.modal-content.dragon {
+    background-color: #6f38f6;
+    color: white;
+}
+
+.modal-content.fairy {
+    background-color: #f9aec7;
+    color: black;
+}
+
+.modal-content.normal {
+    background-color: #a6a877;
+    color: black;
+}
 
 
 .pokemon {
@@ -54,13 +178,13 @@
     flex-direction: column;
 }
 
-.pokemon .name{
+.pokemon .name {
     color: #fff;
     margin-bottom: 0.25rem;
     text-transform: capitalize;
 }
 
-.pokemon .number{
+.pokemon .number {
     color: #000;
     opacity: 0.3;
     text-align: right;
@@ -75,16 +199,16 @@
 
 
 .pokemon .detail .types {
-   padding: 0;
-   margin: 0;
-   list-style: none; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.pokemon .detail .types .type{
+.pokemon .detail .types .type {
     color: #fff;
     padding: .25rem .5rem;
     border-radius: 1rem;
-    margin: 0.25rem 0; 
+    margin: 0.25rem 0;
     font-size: 0.625rem;
     filter: brightness(1.1);
     text-align: center;
@@ -118,45 +242,52 @@
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-header {
+    position: relative;
+    text-align: center;
+    padding-top: 40px;
 }
 
 .modal-content {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  width: 500px;
-  height: 500px;
-  text-align: center;
-  position: relative;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 500px;
+    height: 450px;
+    text-align: center;
+    position: relative;
+
 }
 
 .modal.hidden {
-  display: none;
+    display: none;
 }
 
 .modal-close {
-  padding: 10px 20px;
-  border-radius: 15px;
-  color: #fff;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 58px;
-  font-weight: bold;
+    padding: 5px 5px;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: -15px;
+    right: 1px;
+    font-size: 58px;
+    font-weight: bold;
 }
 
-.modal-img {
+/* .modal-img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -167,9 +298,24 @@
     transform: translateX(-50%);
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
+
+.modal-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    padding: 10px;
+    border: 5px solid white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.modal-name {
+/* .modal-name {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -179,9 +325,15 @@
     top: 135px;
     left: 50%;
     transform: translateX(-50%);
+} */
+
+.modal-name {
+    margin-top: 25px;
+    font-size: 1.5rem;
+    text-transform: capitalize;
 }
 
-.modal-number {
+/* .modal-number {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -190,9 +342,15 @@
     top: 180px;
     left: 50%;
     transform: translateX(-50%);
+} */
+
+
+.modal-number {
+    font-size: 1rem;
+    opacity: 0.6;
 }
 
-.modal-types {
+/* .modal-type {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -201,28 +359,215 @@
     top: 20px;
     left: 15%;
     transform: translateX(-50%);
-    
+} */
+
+.modal-types {
+    margin-top: 0.5rem;
+}
+
+
+.type-tag {
+    display: inline-block;
+    background-color: gray;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: white;
+    font-weight: bold;
+    margin: 0 4px;
+    text-transform: uppercase;
+}
+
+
+.type-tag.normal {
+    background-color: #a6a877;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.grass {
+    background-color: #77c850;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.fire {
+    background-color: #ee7f30;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.water {
+    background-color: #678fee;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.electric {
+    background-color: #f7cf2e;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.ice {
+    background-color: #98d5d7;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.ground {
+    background-color: #dfbf69;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.flying {
+    background-color: #a98ff0;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.poison {
+    background-color: #a040a0;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.fighting {
+    background-color: #bf3029;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.psychic {
+    background-color: #f65687;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.dark {
+    background-color: #725847;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.rock {
+    background-color: #b8a137;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.bug {
+    background-color: #a8b720;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.ghost {
+    background-color: #6e5896;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.steel {
+    background-color: #b9b7cf;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.dragon {
+    background-color: #6f38f6;
+    filter: brightness(1.2);
+
+}
+
+.type-tag.fairy {
+    background-color: #f9aec7;
+    filter: brightness(1.2);
+
+}
+
+
+.modal-info-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.modal-info-list li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.stat-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+.stat-bar {
+    height: 8px;
+    border-radius: 5px;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.4s ease-in-out;
+}
+
+.modal-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.tab-button.active {
+  border-color: #333;
+}
+
+.tab-content {
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
 }
 
 
 
-@media screen and (min-width: 380px){
-    .pokemons{
-       grid-template-columns: 1fr 1fr  ;
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
 
-@media screen and (min-width: 576px){
-    .pokemons{
-       grid-template-columns: 1fr 1fr 1fr ;
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
 }
 
-@media screen and (min-width: 992px){
-    .pokemons{
-       grid-template-columns: 1fr 1fr 1fr 1fr;
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
 }

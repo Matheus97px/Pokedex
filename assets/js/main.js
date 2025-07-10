@@ -42,26 +42,83 @@ document.querySelector(".modal-close").addEventListener("click", () => {
 
 
 function showPokemonDetails(pokemon) {
-    // const pokemon = document.querySelector(`.pokemon:nth-child(${pokemonId})`);
     const modal = document.getElementById('pokemonModal');
+    const modalContent = modal.querySelector('.modal-content');
+    const infoList = modal.querySelector(".modal-info-list");
+    const statsList = modal.querySelector(".modal-stats-list");
+    const tabButtons = document.querySelectorAll('.tab-button')
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remover .active de todos
+            tabButtons.forEach(btn => btn.classList.remove('active'))
+            button.classList.add('active')
+
+            // Esconder todas as abas
+            document.querySelector('.about-tab').classList.add('hidden')
+            document.querySelector('.stats-tab').classList.add('hidden')
+
+            // Mostrar aba selecionada
+            const selected = button.dataset.tab
+            document.querySelector(`.${selected}-tab`).classList.remove('hidden')
+        })
+    })
+
+
+
+    statsList.innerHTML = ''
+
+    pokemon.stats.forEach(stat => {
+        const li = document.createElement('li');
+
+        const label = document.createElement('div');
+        label.className = 'stat-label';
+        label.innerHTML = `<span>${stat.name.toUpperCase()}</span><span>${stat.base}</span>`;
+
+        const bar = document.createElement('div');
+        bar.className = 'stat-bar';
+
+        const fill = document.createElement('div');
+        fill.className = 'stat-fill';
+        fill.style.width = `${stat.base > 100 ? 100 : stat.base}%`
+
+        bar.appendChild(fill);
+        li.appendChild(label);
+        li.appendChild(bar);
+        statsList.appendChild(li);
+    })
+
+    infoList.innerHTML = `
+        <li><strong>Height:</strong> ${pokemon.height} m</li>
+        <li><strong>Weight:</strong> ${pokemon.weight} kg</li>
+        <li><strong>Abilities:</strong> ${pokemon.abilities.join(', ')}</li>
+    
+    `
+
+    modalContent.classList.remove('fire', 'grass', 'water', 'electric', 'bug', 'poison', 'normal', 'psychic', 'ground', 'flying', 'rock', 'dark', 'dragon', 'ghost', 'fairy', 'ice', 'steel', 'fighting');
+
+    modalContent.classList.add(pokemon.type);
+
 
     modal.querySelector(".modal-name").innerText = pokemon.name;
     modal.querySelector(".modal-number").innerText = `#${pokemon.number}`;
-    modal.querySelector(".modal-type").innerText = pokemon.types.join(', ');
+    // modal.querySelector(".modal-type").innerText = pokemon.types.join(' ');
     modal.querySelector(".modal-img").src = pokemon.photo;
+
+    const typesContainer = modal.querySelector(".modal-types")
+    typesContainer.innerHTML = ''
+    pokemon.types.forEach(type => {
+        const span = document.createElement('span')
+        span.className = `type-tag ${type}`
+        span.innerText = type
+        typesContainer.appendChild(span)
+    })
+
+
 
     modal.classList.remove('hidden');
     modal.classList.add('show');
-    const modalContent = document.querySelector('.modal-content');
-    const modaltype = document.querySelector('.modal-type');
-    modalContent.classList.remove('fire', 'grass', 'water', 'electric', 'bug', 'poison','normal', 'psychic', 'ground', 'flying', 'rock', 'dark','dragon', 'ghost', 'fairy', 'ice', 'steel', 'fighting');
-
-    modalContent.classList.add(pokemon.type);
-    // const number = pokemon.querySelector('.number').textContent;
-    // const name = pokemon.querySelector('.name').textContent;
-    // const types = Array.from(pokemon.querySelectorAll('.type')).map(type => type.textContent);
-    // const photo = pokemon.querySelector('img').src;
+    // const modaltype = document.querySelector('.modal-type');
 
 
-    // alert(`Number: ${number}\nName: ${name}\nTypes: ${types.join(', ')}\nPhoto: ${photo}`);
 }
