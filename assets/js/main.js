@@ -47,6 +47,14 @@ function showPokemonDetails(pokemon) {
     const infoList = modal.querySelector(".modal-info-list");
     const statsList = modal.querySelector(".modal-stats-list");
     const tabButtons = document.querySelectorAll('.tab-button')
+    const movesList = modal.querySelector(".modal-moves-list");
+    movesList.innerHTML = "";
+
+    pokemon.moves.slice(0, 20).forEach(move => {
+        const li = document.createElement('li');
+        li.innerText = move
+        movesList.appendChild(li)
+    })
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -57,6 +65,7 @@ function showPokemonDetails(pokemon) {
             // Esconder todas as abas
             document.querySelector('.about-tab').classList.add('hidden')
             document.querySelector('.stats-tab').classList.add('hidden')
+            document.querySelector('.moves-tab').classList.add('hidden')
 
             // Mostrar aba selecionada
             const selected = button.dataset.tab

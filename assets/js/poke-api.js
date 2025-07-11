@@ -20,6 +20,14 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
         base: stat.base_stat
     }));
 
+    pokemon.moves = pokeDetail.moves.map((moveSlot) => moveSlot.move.name);
+
+    
+
+
+
+
+
     return pokemon
 }
 

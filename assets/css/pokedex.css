@@ -81,92 +81,92 @@
 
 .modal-content.fire {
     background-color: #ee7f30;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.grass {
     background-color: #77c850;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.water {
     background-color: #678fee;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.electric {
     background-color: #f7cf2e;
-    color: black;
+    color: #000000;
 }
 
 .modal-content.ice {
     background-color: #98d5d7;
-    color: black;
+    color: #000000;
 }
 
 .modal-content.ground {
     background-color: #dfbf69;
-    color: black;
+    color: #000000;
 }
 
 .modal-content.flying {
     background-color: #a98ff0;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.poison {
     background-color: #a040a0;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.fighting {
     background-color: #bf3029;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.psychic {
     background-color: #f65687;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.dark {
     background-color: #725847;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.rock {
     background-color: #b8a137;
-    color: black;
+    color: #000000;
 }
 
 .modal-content.bug {
     background-color: #a8b720;
-    color: black;
+    color: #000000;
 }
 
 .modal-content.ghost {
     background-color: #6e5896;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.steel {
     background-color: #b9b7cf;
-    color: black;
+    color: #000000;
 }
 
 .modal-content.dragon {
     background-color: #6f38f6;
-    color: white;
+    color: #000000;
 }
 
 .modal-content.fairy {
     background-color: #f9aec7;
-    color: black;
+    color: #000000;
 }
 
 .modal-content.normal {
     background-color: #a6a877;
-    color: black;
+    color: #000000;
 }
 
 
@@ -265,7 +265,7 @@
     padding: 25px;
     border-radius: 15px;
     width: 500px;
-    height: 450px;
+    height: 460px;
     text-align: center;
     position: relative;
 
@@ -548,6 +548,23 @@
   display: none;
 }
 
+.modal-moves-list {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    gap: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.modal-moves-list li {
+    background: #eee;
+    padding: 0.5rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+}
 
 
 
