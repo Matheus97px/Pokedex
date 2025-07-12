@@ -1,10 +1,13 @@
 *{
-    font-family: 'roboto', 'sans-serif';
+    font-family: 'Press Start 2P', 'sans-serif';
     box-sizing: border-box;
 }
 
 body {
     background-color: #f6f8fc;
+    background-image: url('../img/laihibkyx1o41.jpg');
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .content{
@@ -12,6 +15,11 @@ body {
     background-color: #fff;
     height: 100vh;
     width: 100vw;
+    background-image: url('../img/laihibkyx1o41.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+
+
 }
 
 .content h1 {

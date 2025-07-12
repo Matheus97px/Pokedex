@@ -1,6 +1,6 @@
 const pokeApi = {}
 
-function convertPokeApiDetailToPokemon(pokeDetail) {
+async function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
@@ -22,10 +22,39 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
     pokemon.moves = pokeDetail.moves.map((moveSlot) => moveSlot.move.name);
 
-    
+    // Busca a cadeia de evolução
+    const speciesResponse = await fetch(pokeDetail.species.url)
+    const speciesData = await speciesResponse.json()
 
+    const evolutionChainUrl = speciesData.evolution_chain.url
+    const evolutionReponse = await fetch(evolutionChainUrl)
+    const evolutionData = await evolutionReponse.json()
 
+    // funcao recursiva para mapear todos os estagios da cadeia
+    const evolutionList = []
+    function extractEvolution(chain) {
+        const name = chain.species.name
+        evolutionList.push(name)
 
+        if (chain.evolves_to.length > 0) {
+             extractEvolution(chain.evolves_to[0])
+        }
+    }
+    extractEvolution(evolutionData.chain)
+
+    // Busca detalhes (imagem e numeros) para cada evolução
+    const evolutionDetails = await Promise.all(evolutionList.map(async (name) => {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        const data = await res.json()
+        return {
+            name: data.name,
+            number: data.id,
+            image: data.sprites.front_default
+            // image: data.sprites.other['official-artwork'].front_default
+        }
+    }))
+
+    pokemon.evolution = evolutionDetails
 
 
     return pokemon
