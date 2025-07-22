@@ -192,6 +192,11 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
 }
 
+.pokemon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
 .pokemon .name {
     color: #fff;
     font-weight: bold;
@@ -630,6 +635,11 @@
 
 }
 
+.evolution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
 
 
 .evolution-card span {
